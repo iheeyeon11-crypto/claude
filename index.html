@@ -1,334 +1,338 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>REVION ℞ — Find Your Recovery</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>REVION ℞ — 약사가 만든 더마 코스메틱</title>
+<meta name="description" content="EGF로 채우고 PDRN으로 잠그는 단 하나의 회복 루틴. 약국에서 검증된 저자극 더마 포뮬러, 레비온." />
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
+<!-- ===== Announce ===== -->
+<div class="announce">
+  전국 1,200여 약국 입점 · 50,000원 이상 무료배송 · 첫 구매 10% 할인
+</div>
+
 <!-- ===== Header ===== -->
-<header class="nav" data-reveal>
-  <a href="#" class="brand">REVION <span class="brand__rx">℞</span></a>
-  <nav class="nav__links">
-    <a href="#">SHOP</a>
-    <a href="#">ROUTINE</a>
-    <a href="#">JOURNAL</a>
-    <a href="#">PHARMACY</a>
-  </nav>
-  <div class="nav__util">
-    <a href="#">SEARCH</a>
-    <a href="#">CART <sup>0</sup></a>
+<header class="hdr">
+  <div class="hdr__inner">
+    <nav class="hdr__nav hdr__nav--left">
+      <a href="#">ABOUT</a>
+      <a href="#">SHOP</a>
+      <a href="#">PHARMARCY</a>
+      <a href="#">EVENT</a>
+      <a href="#">COMMUNITY</a>
+    </nav>
+    <a href="#" class="hdr__logo">
+      <img src="images/figma-logo.svg" alt="REVION RX" />
+    </a>
+    <nav class="hdr__nav hdr__nav--right">
+      <a href="#">LOGIN</a>
+      <a href="#">JOIN</a>
+      <a href="#" class="hdr__cart">Cart 2</a>
+    </nav>
   </div>
 </header>
 
-<!-- ===== HERO — full-bleed cinematic ===== -->
-<section class="hero">
-  <!-- top marquee -->
-  <div class="marquee marquee--top" aria-hidden="true">
-    <div class="marquee__track">
-      <span>FILL YOUR SKIN</span><span class="dash">—</span>
-      <span>FILL YOUR SKIN</span><span class="dash">—</span>
-      <span>FILL YOUR SKIN</span><span class="dash">—</span>
-      <span>FILL YOUR SKIN</span><span class="dash">—</span>
-      <span>FILL YOUR SKIN</span><span class="dash">—</span>
-      <span>FILL YOUR SKIN</span><span class="dash">—</span>
+<!-- ===== Hero ===== -->
+<section class="hero" aria-label="REVION 5월 EVENT">
+  <div class="hero__bg">
+    <img src="images/figma-hero.webp" alt="레비온 모델" />
+  </div>
+  <div class="hero__copy">
+    <p class="hero__eyebrow">REVION 5월 EVENT</p>
+    <h1 class="hero__title">퍼펙트 회복<br/>5월 EVENT</h1>
+    <p class="hero__sub">전 제품 20% OFF · 신규 회원 10% 추가할인</p>
+    <a href="#shop" class="btn-pill">지금 쇼핑하기</a>
+  </div>
+  <div class="hero__dots" aria-hidden="true">
+    <span class="is-on"></span><span></span><span></span>
+  </div>
+</section>
+
+<!-- ===== Category Tile ===== -->
+<section class="cattile">
+  <a href="#" class="ctile ctile--base">
+    <img src="images/figma-base-care.webp" alt="BASE CARE" />
+    <div class="ctile__overlay">
+      <p class="ctile__rt">3-Step Daily Routine</p>
+      <span class="ctile__cap">BASE CARE</span>
     </div>
-  </div>
+  </a>
+  <a href="#" class="ctile ctile--sun">
+    <img src="images/figma-sun-care.webp" alt="SUN CARE" />
+    <div class="ctile__overlay">
+      <p class="ctile__rt">3-Step Daily Routine</p>
+      <span class="ctile__cap">SUN CARE</span>
+    </div>
+  </a>
+</section>
 
-  <figure class="hero__bg">
-    <img src="images/hero-main.webp" alt="">
-    <div class="hero__veil"></div>
-  </figure>
-
-  <div class="hero__center" data-reveal>
-    <p class="hero__eyebrow">— A PHARMACIST'S RECOVERY RITUAL —</p>
-    <p class="hero__lede">
-      EGF로 채우고 PDRN으로 잠그는<br>
-      단 하나의 회복 루틴.<br>
-      약국에서 검증된 저자극 더마 포뮬러.
-    </p>
-    <a href="#chapter1" class="pill">DISCOVER</a>
-  </div>
-
-  <!-- bottom marquee -->
-  <div class="marquee marquee--bottom" aria-hidden="true">
-    <div class="marquee__track marquee__track--reverse">
-      <span>LOCK IT IN</span><span class="dash">→</span>
-      <span>LOCK IT IN</span><span class="dash">→</span>
-      <span>LOCK IT IN</span><span class="dash">→</span>
-      <span>LOCK IT IN</span><span class="dash">→</span>
-      <span>LOCK IT IN</span><span class="dash">→</span>
-      <span>LOCK IT IN</span><span class="dash">→</span>
+<!-- ===== Best Items ===== -->
+<section class="best" id="shop">
+  <h2 class="sec-title">지금 가장 사랑받는 제품</h2>
+  <div class="best__row">
+    <a href="#" class="best__hero">
+      <img src="images/figma-best-hero.webp" alt="REVION Signature" />
+    </a>
+    <div class="best__list">
+      <a href="#" class="bitem">
+        <div class="bitem__img"><img src="images/figma-cream-thumb.webp" alt="" /></div>
+        <div class="bitem__info">
+          <p class="bitem__name">PDRN EGF Origin Rejuvenating Cream 50ml</p>
+          <p class="bitem__sub">매일의 회복 루틴을 완성하는 시그니처 크림. EGF로 채우고 PDRN으로 잠그는 듀얼 포뮬러.</p>
+          <div class="bitem__price">
+            <span class="pct">20%</span>
+            <span class="was">₩56,000</span>
+            <span class="now">₩45,000</span>
+          </div>
+        </div>
+      </a>
+      <a href="#" class="bitem">
+        <div class="bitem__img"><img src="images/figma-mask-thumb.webp" alt="" /></div>
+        <div class="bitem__info">
+          <p class="bitem__name">PDRN EGF Origin Rejuvenating Mask 100ml</p>
+          <p class="bitem__sub">잠든 사이 EGF·PDRN으로 채우고 잠그는 슬리핑 마스크 팩.</p>
+          <div class="bitem__price">
+            <span class="pct">20%</span>
+            <span class="was">₩56,000</span>
+            <span class="now">₩45,000</span>
+          </div>
+        </div>
+      </a>
+      <a href="#" class="bitem bitem--last">
+        <div class="bitem__img"><img src="images/figma-sun-thumb.webp" alt="" /></div>
+        <div class="bitem__info">
+          <p class="bitem__name">PDRN EGF Origin Rejuvenating Sun Cream 50ml</p>
+          <p class="bitem__sub">약국에서 검증된 저자극 SPF50+ PA++++ 데일리 선크림.</p>
+          <div class="bitem__price">
+            <span class="pct">20%</span>
+            <span class="was">₩56,000</span>
+            <span class="now">₩45,000</span>
+          </div>
+        </div>
+      </a>
     </div>
   </div>
 </section>
 
-<!-- ===== Section divider — giant horizontal marquee ===== -->
-<section class="divider">
-  <div class="marquee__track marquee__track--huge">
-    <span>FIND YOUR RECOVERY</span><span class="star">✦</span>
-    <span>FIND YOUR RECOVERY</span><span class="star">✦</span>
-    <span>FIND YOUR RECOVERY</span><span class="star">✦</span>
-    <span>FIND YOUR RECOVERY</span><span class="star">✦</span>
-  </div>
+<!-- ===== Philosophy ===== -->
+<section class="philosophy">
+  <h2 class="philo__title">NATURAL INGREDIENTS<br/>COSMETIC PRESCRIPTION</h2>
+  <p class="philo__body">
+    약사가 만든 더마 코스메틱. 매일의 피부에 필요한 것을 덜어내고, 꼭 필요한 두 성분만 남겼습니다. PDRN 1,200ppm으로 손상된 장벽을 잠그고, EGF 2ppm으로 회복의 신호를 채워 넣습니다. 약국에서 검증된 저자극 포뮬러로 매일의 회복 루틴을 완성하세요.
+  </p>
 </section>
 
-<!-- ===== CH.01 — Three-step cinematic ===== -->
-<section class="chapter" id="chapter1">
-  <header class="chapter__head" data-reveal>
-    <span class="chapter__no">— 01 / SIGNATURE</span>
-    <h2 class="chapter__title">
-      <span class="word">Three</span>
-      <span class="word">Step.</span>
-    </h2>
-    <p class="chapter__sub">매일의 회복을 위한 세 가지 단계 — 아침과 밤, 그리고 햇살 아래.</p>
-  </header>
+<!-- ===== New Items ===== -->
+<section class="newitems">
+  <div class="newitems__head">
+    <h2 class="sec-title">New Items</h2>
+    <p class="sec-sub">REVION의 신제품 &amp; 인기 제품을 소개합니다</p>
+    <div class="tabs" role="tablist">
+      <button class="tab is-on">ALL</button>
+      <button class="tab">CREAM</button>
+      <button class="tab">MASK</button>
+      <button class="tab">SUN</button>
+      <button class="tab">SETS</button>
+    </div>
+  </div>
 
-  <div class="steps">
-    <article class="step" data-reveal>
-      <div class="step__img">
-        <img src="images/product-cream-1.webp" alt="">
-        <span class="step__no">01</span>
-      </div>
-      <div class="step__meta">
-        <span class="step__tag">BEST · CREAM</span>
-        <h3>PDRN EGF Origin<br>Rejuvenating Cream</h3>
-        <p class="step__price"><s>₩56,000</s> <b>₩45,000</b></p>
+  <div class="pgrid">
+    <article class="pcard">
+      <a href="#" class="pcard__media">
+        <img src="images/figma-pcard1.webp" alt="" />
+        <button class="wish" aria-label="찜하기">♡</button>
+      </a>
+      <p class="pcard__name">REVION rx Signature Gift Set</p>
+      <p class="pcard__opt">50ml</p>
+      <div class="pcard__price">
+        <span class="pct">20%</span>
+        <span class="was">₩42,000</span>
+        <span class="now">₩33,600</span>
       </div>
     </article>
 
-    <article class="step step--offset" data-reveal>
-      <div class="step__img">
-        <img src="images/product-mask-1.webp" alt="">
-        <span class="step__no">02</span>
+    <article class="pcard">
+      <a href="#" class="pcard__media">
+        <img src="images/figma-pcard2.webp" alt="" />
+        <button class="wish" aria-label="찜하기">♡</button>
+      </a>
+      <p class="pcard__name">REVION rx Daily Care Set</p>
+      <p class="pcard__opt">100ml</p>
+      <div class="pcard__price">
+        <span class="pct">20%</span>
+        <span class="was">₩48,000</span>
+        <span class="now">₩38,400</span>
       </div>
-      <div class="step__meta">
-        <span class="step__tag">MASK</span>
-        <h3>PDRN EGF Origin<br>Rejuvenating Mask</h3>
-        <p class="step__price"><s>₩56,000</s> <b>₩45,000</b></p>
+    </article>
+
+    <article class="pcard">
+      <a href="#" class="pcard__media">
+        <img src="images/figma-pcard3.webp" alt="" />
+        <button class="wish" aria-label="찜하기">♡</button>
+      </a>
+      <p class="pcard__name">PDRN EGF Daily Sun Stick</p>
+      <p class="pcard__opt">21g</p>
+      <div class="pcard__price">
+        <span class="pct">20%</span>
+        <span class="was">₩32,000</span>
+        <span class="now">₩25,600</span>
       </div>
     </article>
 
-    <article class="step" data-reveal>
-      <div class="step__img">
-        <img src="images/product-suncream-1.webp" alt="">
-        <span class="step__no">03</span>
+    <article class="pcard">
+      <a href="#" class="pcard__media">
+        <img src="images/figma-pcard4.webp" alt="" />
+        <button class="wish" aria-label="찜하기">♡</button>
+      </a>
+      <p class="pcard__name">REVION rx Sun Cream 3 Set</p>
+      <p class="pcard__opt">2종</p>
+      <div class="pcard__price">
+        <span class="pct">20%</span>
+        <span class="was">₩85,000</span>
+        <span class="now">₩68,000</span>
       </div>
-      <div class="step__meta">
-        <span class="step__tag">NEW · SUN</span>
-        <h3>PDRN EGF Origin<br>Rejuvenating Sun Cream</h3>
-        <p class="step__price"><s>₩56,000</s> <b>₩45,000</b></p>
+    </article>
+
+    <article class="pcard">
+      <a href="#" class="pcard__media">
+        <img src="images/figma-pcard5.webp" alt="" />
+        <button class="wish" aria-label="찜하기">♡</button>
+      </a>
+      <p class="pcard__name">Night Care Set (Cream + Sleeping Mask)</p>
+      <p class="pcard__opt">2종</p>
+      <div class="pcard__price">
+        <span class="pct">20%</span>
+        <span class="was">₩99,000</span>
+        <span class="now">₩79,000</span>
+      </div>
+    </article>
+
+    <article class="pcard">
+      <a href="#" class="pcard__media">
+        <img src="images/figma-pcard6.webp" alt="" />
+        <button class="wish" aria-label="찜하기">♡</button>
+      </a>
+      <p class="pcard__name">Sun Cream 3 Set (3개입)</p>
+      <p class="pcard__opt">50ml × 3</p>
+      <div class="pcard__price">
+        <span class="pct">20%</span>
+        <span class="was">₩123,000</span>
+        <span class="now">₩99,000</span>
+      </div>
+    </article>
+
+    <article class="pcard">
+      <a href="#" class="pcard__media">
+        <img src="images/figma-sun-thumb.webp" alt="" />
+        <button class="wish" aria-label="찜하기">♡</button>
+      </a>
+      <p class="pcard__name">PDRN EGF Origin Rejuvenating Cream</p>
+      <p class="pcard__opt">50ml</p>
+      <div class="pcard__price">
+        <span class="pct">20%</span>
+        <span class="was">₩56,000</span>
+        <span class="now">₩45,000</span>
+      </div>
+    </article>
+
+    <article class="pcard">
+      <a href="#" class="pcard__media">
+        <img src="images/figma-pcard8.webp" alt="" />
+        <button class="wish" aria-label="찜하기">♡</button>
+      </a>
+      <p class="pcard__name">PDRN EGF Origin Rejuvenating Mask</p>
+      <p class="pcard__opt">100ml / 30매</p>
+      <div class="pcard__price">
+        <span class="pct">20%</span>
+        <span class="was">₩56,000</span>
+        <span class="now">₩45,000</span>
       </div>
     </article>
   </div>
 </section>
 
-<!-- ===== CH.02 — Pinned cinematic image with overlay copy ===== -->
-<section class="cinema">
-  <figure class="cinema__bg">
-    <img src="images/cta-banner.webp" alt="">
-    <div class="cinema__veil"></div>
-  </figure>
-  <div class="cinema__copy" data-reveal>
-    <span class="chapter__no">— 02 / THE FORMULA</span>
-    <h2 class="cinema__title">
-      Fill<br>
-      <em>&amp;</em><br>
-      Lock<span class="dot">.</span>
-    </h2>
-    <p class="cinema__lede">
-      PDRN 1,200ppm · EGF 2ppm<br>
-      듀얼 부스팅 포뮬러로<br>
-      손상된 장벽을 잠그고<br>
-      회복의 신호를 채워 넣습니다.
-    </p>
-    <a href="#" class="pill pill--light">READ THE STORY</a>
+<!-- ===== Instagram ===== -->
+<section class="ig-sec">
+  <div class="ig-sec__head">
+    <h2 class="sec-title">@revion_rx</h2>
+    <p class="sec-sub">매일의 회복 루틴, 약사가 직접 전해드리는 더마 노트</p>
+    <a href="#" class="btn-pill">인스타그램 팔로우하기 →</a>
   </div>
-</section>
-
-<!-- ===== Divider ===== -->
-<section class="divider divider--alt">
-  <div class="marquee__track marquee__track--huge marquee__track--reverse">
-    <span>PHARMACY-VERIFIED</span><span class="star">✦</span>
-    <span>PHARMACY-VERIFIED</span><span class="star">✦</span>
-    <span>PHARMACY-VERIFIED</span><span class="star">✦</span>
-    <span>PHARMACY-VERIFIED</span><span class="star">✦</span>
-  </div>
-</section>
-
-<!-- ===== CH.03 — Sticky split: pinned media + scrolling feed ===== -->
-<section class="split">
-  <aside class="split__sticky">
-    <div class="loop">
-      <img class="loop__frame" src="images/split-hero.webp" alt="">
-      <img class="loop__frame" src="images/split-hero.webp" alt="">
-      <img class="loop__frame" src="images/split-hero.webp" alt="">
-    </div>
-    <div class="split__veil"></div>
-    <div class="split__copy" data-reveal>
-      <span class="chapter__no chapter__no--inv">— 03 / EDIT</span>
-      <h2 class="split__title">
-        Find Your<br>
-        <em>Recovery.</em>
-      </h2>
-      <p class="split__sub">REVION ℞의 다양한 카테고리 라인업을 둘러보세요.</p>
-      <a href="#" class="pill">VIEW MORE</a>
-    </div>
-  </aside>
-
-  <div class="split__feed">
-    <div class="split__feedhead" data-reveal>
-      <span class="chapter__no">ALL · 8 ITEMS</span>
-      <div class="split__chips">
-        <button class="chip is-on">ALL</button>
-        <button class="chip">CREAM</button>
-        <button class="chip">MASK</button>
-        <button class="chip">SUN</button>
-        <button class="chip">SETS</button>
-      </div>
-    </div>
-
-    <a href="#" class="fcard" data-reveal>
-      <div class="fcard__img"><img src="images/giftset-main.webp" alt=""></div>
-      <h3>Signature Gift Set</h3>
-      <p><span class="badge">20%</span> <b>₩112,000</b> <s>₩140,000</s></p>
-    </a>
-    <a href="#" class="fcard" data-reveal>
-      <div class="fcard__img"><img src="images/cream-flat.webp" alt=""></div>
-      <h3>Rejuvenating Cream</h3>
-      <p><span class="badge">20%</span> <b>₩45,000</b> <s>₩56,000</s></p>
-    </a>
-    <a href="#" class="fcard" data-reveal>
-      <div class="fcard__img"><img src="images/mask-flat.webp" alt=""></div>
-      <h3>Rejuvenating Mask</h3>
-      <p><span class="badge">20%</span> <b>₩45,000</b> <s>₩56,000</s></p>
-    </a>
-    <a href="#" class="fcard" data-reveal>
-      <div class="fcard__img"><img src="images/sun-flat.webp" alt=""></div>
-      <h3>Rejuvenating Sun Cream</h3>
-      <p><span class="badge">20%</span> <b>₩45,000</b> <s>₩56,000</s></p>
-    </a>
-    <a href="#" class="fcard" data-reveal>
-      <div class="fcard__img"><img src="images/product-cream-2.webp" alt=""></div>
-      <h3>Daily Care Set</h3>
-      <p><span class="badge">20%</span> <b>₩68,000</b> <s>₩85,000</s></p>
-    </a>
-    <a href="#" class="fcard" data-reveal>
-      <div class="fcard__img"><img src="images/product-mask-2.webp" alt=""></div>
-      <h3>Night Care Set</h3>
-      <p><span class="badge">20%</span> <b>₩79,000</b> <s>₩99,000</s></p>
-    </a>
-    <a href="#" class="fcard" data-reveal>
-      <div class="fcard__img"><img src="images/product-suncream-2.webp" alt=""></div>
-      <h3>Sun Cream 3 Set</h3>
-      <p><span class="badge">20%</span> <b>₩99,000</b> <s>₩123,000</s></p>
-    </a>
-    <a href="#" class="fcard fcard--cta" data-reveal>
-      <div class="fcard__poster">
-        <span>EXPLORE</span>
-        <h4>모든 라인업<br>한번에 보기 →</h4>
-      </div>
-    </a>
-  </div>
-</section>
-
-<!-- ===== CH.04 — Horizontal-scroll gallery (Instagram) ===== -->
-<section class="gallery">
-  <header class="chapter__head chapter__head--row" data-reveal>
-    <div>
-      <span class="chapter__no">— 04 / GALLERY</span>
-      <h2 class="chapter__title">
-        <span class="word">@revion_rx</span>
-      </h2>
-    </div>
-    <a href="#" class="pill pill--ghost">FOLLOW US</a>
-  </header>
-
-  <div class="hscroll">
-    <a href="#"><img src="images/ig-1.webp" alt=""></a>
-    <a href="#"><img src="images/ig-2.webp" alt=""></a>
-    <a href="#"><img src="images/ig-3.webp" alt=""></a>
-    <a href="#"><img src="images/ig-4.webp" alt=""></a>
-    <a href="#"><img src="images/ig-5.webp" alt=""></a>
-    <a href="#"><img src="images/ig-6.webp" alt=""></a>
-    <a href="#"><img src="images/ig-7.webp" alt=""></a>
-    <a href="#"><img src="images/ig-8.webp" alt=""></a>
-  </div>
-</section>
-
-<!-- ===== Newsletter — black blade ===== -->
-<section class="news">
-  <div class="news__inner" data-reveal>
-    <span class="chapter__no chapter__no--inv">— 05 / SUBSCRIBE</span>
-    <h2 class="news__title">
-      <span class="word">Find</span>
-      <span class="word">Your</span>
-      <span class="word"><em>Recovery.</em></span>
-    </h2>
-    <p class="news__sub">매월, 약사의 노트와 신제품 소식을 가장 먼저 전해드립니다.</p>
-    <form>
-      <input type="email" placeholder="your@email.com">
-      <button>SUBSCRIBE →</button>
-    </form>
+  <div class="ig-grid">
+    <a href="#"><img src="images/figma-ig1.webp" alt="" /></a>
+    <a href="#"><img src="images/figma-ig2.webp" alt="" /></a>
+    <a href="#"><img src="images/figma-ig3.webp" alt="" /></a>
+    <a href="#"><img src="images/figma-ig4.webp" alt="" /></a>
+    <a href="#"><img src="images/figma-ig5.webp" alt="" /></a>
+    <a href="#"><img src="images/figma-ig6.webp" alt="" /></a>
   </div>
 </section>
 
 <!-- ===== Footer ===== -->
-<footer class="foot">
-  <div class="foot__cols">
-    <div>
-      <p class="foot__brand">REVION ℞</p>
-      <p class="foot__tag">약사가 만든 더마 코스메틱</p>
+<footer class="footer">
+  <div class="foot-top">
+    <a href="#" class="strong">회사소개</a>
+    <a href="#">이용약관</a>
+    <a href="#" class="strong">개인정보처리방침</a>
+    <a href="#">제휴문의</a>
+    <a href="#">고객센터</a>
+    <a href="#">매장찾기</a>
+  </div>
+  <div class="foot-main">
+    <div class="foot-brand">
+      <p class="fb-mark">REVION ℞</p>
+      <p class="fb-tag">약사가 만든 더마 코스메틱</p>
+      <div class="fb-sns">
+        <a href="#" class="sns">IG</a>
+        <a href="#" class="sns">YT</a>
+        <a href="#" class="sns">KKO</a>
+      </div>
     </div>
-    <div>
-      <p class="foot__head">SHOP</p>
-      <a href="#">Cream</a><a href="#">Mask</a><a href="#">Sun</a><a href="#">Sets</a>
+    <div class="foot-info">
+      <p class="strong">고객센터 1588-0000</p>
+      <p>평일 09:00 ~ 18:00 (점심 12:00 ~ 13:00, 주말·공휴일 휴무)</p>
+      <p>주식회사 바로팜 · 대표 OOO · 사업자등록번호 000-00-00000</p>
+      <p>통신판매업신고 제 2026-서울ㅇㅇ-0000 호</p>
+      <p>주소 서울특별시 ㅇㅇ구 ㅇㅇ로 000, 0층</p>
+      <p>이메일 cs@baropharm.co.kr</p>
     </div>
-    <div>
-      <p class="foot__head">ABOUT</p>
-      <a href="#">Story</a><a href="#">Journal</a><a href="#">Pharmacy</a>
-    </div>
-    <div>
-      <p class="foot__head">HELP</p>
-      <a href="#">FAQ</a><a href="#">Shipping</a><a href="#">Contact</a>
+    <div class="foot-pay">
+      <p class="strong">결제수단</p>
+      <div class="pay-icons">
+        <span>VISA</span><span>MASTER</span><span>JCB</span><span>NPAY</span><span>KKO</span><span>PAYCO</span>
+      </div>
     </div>
   </div>
-  <p class="foot__copy">© 2026 BAROPHARM CO. — ALL RIGHTS RESERVED.</p>
+  <div class="foot-copy">© 2026 BAROPHARM CO. ALL RIGHTS RESERVED.</div>
 </footer>
 
 <script>
-  // ----- Scroll reveal -----
-  const io = new IntersectionObserver((entries) => {
-    for (const e of entries) {
-      if (e.isIntersecting) {
-        e.target.classList.add('is-in');
-        io.unobserve(e.target);
-      }
-    }
-  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
-  document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
-
-  // ----- Filter (visual only) -----
-  document.querySelectorAll('.filter__btn').forEach(b => {
-    b.addEventListener('click', () => {
-      document.querySelectorAll('.filter__btn').forEach(x => x.classList.remove('is-on'));
-      b.classList.add('is-on');
+  // Tabs (visual only)
+  document.querySelectorAll('.tabs .tab').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tabs .tab').forEach(b => b.classList.remove('is-on'));
+      btn.classList.add('is-on');
     });
   });
 
-  // ----- Header scroll state -----
-  const nav = document.querySelector('.nav');
-  let lastY = 0;
-  window.addEventListener('scroll', () => {
-    const y = window.scrollY;
-    nav.classList.toggle('is-shrunk', y > 60);
-    lastY = y;
-  }, { passive: true });
+  // Hero dots (visual only — auto-rotate)
+  (function(){
+    const dots = document.querySelectorAll('.hero__dots span');
+    if (dots.length < 2) return;
+    let i = 0;
+    setInterval(() => {
+      i = (i + 1) % dots.length;
+      dots.forEach((d, idx) => d.classList.toggle('is-on', idx === i));
+    }, 4500);
+  })();
 </script>
 
 </body>
