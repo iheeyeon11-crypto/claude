@@ -1,5 +1,64 @@
 /* ===== REVION ℞ — Figma 2032:10531 ===== */
 
+/* === Scroll reveal === */
+[data-reveal] {
+  opacity: 0;
+  transform: translate3d(0, 28px, 0);
+  transition: opacity .9s cubic-bezier(.2,.6,.2,1), transform .9s cubic-bezier(.2,.6,.2,1);
+  will-change: opacity, transform;
+}
+[data-reveal].is-in {
+  opacity: 1;
+  transform: none;
+}
+/* Stagger children when parent has [data-stagger] */
+[data-reveal][data-stagger] > * {
+  opacity: 0;
+  transform: translate3d(0, 22px, 0);
+  transition: opacity .75s cubic-bezier(.2,.6,.2,1), transform .75s cubic-bezier(.2,.6,.2,1);
+  will-change: opacity, transform;
+}
+[data-reveal][data-stagger].is-in > * { opacity: 1; transform: none; }
+[data-reveal][data-stagger].is-in > *:nth-child(1)  { transition-delay: 0s; }
+[data-reveal][data-stagger].is-in > *:nth-child(2)  { transition-delay: .07s; }
+[data-reveal][data-stagger].is-in > *:nth-child(3)  { transition-delay: .14s; }
+[data-reveal][data-stagger].is-in > *:nth-child(4)  { transition-delay: .21s; }
+[data-reveal][data-stagger].is-in > *:nth-child(5)  { transition-delay: .28s; }
+[data-reveal][data-stagger].is-in > *:nth-child(6)  { transition-delay: .35s; }
+[data-reveal][data-stagger].is-in > *:nth-child(7)  { transition-delay: .42s; }
+[data-reveal][data-stagger].is-in > *:nth-child(8)  { transition-delay: .49s; }
+[data-reveal][data-stagger].is-in > *:nth-child(n+9) { transition-delay: .56s; }
+
+/* Parallax base — child img will be transformed inline via JS */
+.hero__bg img,
+.ctile img { will-change: transform; }
+
+/* Header scrolled state */
+.hdr {
+  transition: background-color .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.hdr.is-scrolled {
+  background: rgba(255,255,255,.94);
+  -webkit-backdrop-filter: saturate(160%) blur(10px);
+  backdrop-filter: saturate(160%) blur(10px);
+  border-bottom-color: transparent;
+  box-shadow: 0 1px 0 rgba(0,0,0,.06), 0 6px 20px rgba(0,0,0,.04);
+}
+
+/* Reduced-motion override */
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal],
+  [data-reveal][data-stagger] > * {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .hero__bg img,
+  .ctile img { transform: none !important; }
+}
+
+
+
 :root {
   --ink: #111;
   --ink-2: #0f0f0f;

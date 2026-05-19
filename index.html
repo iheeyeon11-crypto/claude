@@ -43,9 +43,9 @@
 <!-- ===== Hero ===== -->
 <section class="hero" aria-label="REVION 5월 EVENT">
   <div class="hero__bg">
-    <img src="images/figma-hero.webp" alt="레비온 모델" />
+    <img src="images/figma-hero.webp" alt="레비온 모델" data-parallax="0.18" />
   </div>
-  <div class="hero__copy">
+  <div class="hero__copy" data-reveal data-stagger>
     <p class="hero__eyebrow">REVION 5월 EVENT</p>
     <h1 class="hero__title">퍼펙트 회복<br/>5월 EVENT</h1>
     <p class="hero__sub">전 제품 20% OFF · 신규 회원 10% 추가할인</p>
@@ -57,16 +57,16 @@
 </section>
 
 <!-- ===== Category Tile ===== -->
-<section class="cattile">
+<section class="cattile" data-reveal data-stagger>
   <a href="#" class="ctile ctile--base">
-    <img src="images/figma-base-care.webp" alt="BASE CARE" />
+    <img src="images/figma-base-care.webp" alt="BASE CARE" data-parallax-tile="0.08" />
     <div class="ctile__overlay">
       <p class="ctile__rt">3-Step Daily Routine</p>
       <span class="ctile__cap">BASE CARE</span>
     </div>
   </a>
   <a href="#" class="ctile ctile--sun">
-    <img src="images/figma-sun-care.webp" alt="SUN CARE" />
+    <img src="images/figma-sun-care.webp" alt="SUN CARE" data-parallax-tile="0.08" />
     <div class="ctile__overlay">
       <p class="ctile__rt">3-Step Daily Routine</p>
       <span class="ctile__cap">SUN CARE</span>
@@ -76,12 +76,12 @@
 
 <!-- ===== Best Items ===== -->
 <section class="best" id="shop">
-  <h2 class="sec-title">지금 가장 사랑받는 제품</h2>
+  <h2 class="sec-title" data-reveal>지금 가장 사랑받는 제품</h2>
   <div class="best__row">
-    <a href="#" class="best__hero">
+    <a href="#" class="best__hero" data-reveal>
       <img src="images/figma-best-hero.webp" alt="REVION Signature" />
     </a>
-    <div class="best__list">
+    <div class="best__list" data-reveal data-stagger>
       <a href="#" class="bitem">
         <div class="bitem__img"><img src="images/figma-cream-thumb.webp" alt="" /></div>
         <div class="bitem__info">
@@ -123,7 +123,7 @@
 </section>
 
 <!-- ===== Philosophy ===== -->
-<section class="philosophy">
+<section class="philosophy" data-reveal data-stagger>
   <h2 class="philo__title">NATURAL INGREDIENTS<br/>COSMETIC PRESCRIPTION</h2>
   <p class="philo__body">
     약사가 만든 더마 코스메틱. 매일의 피부에 필요한 것을 덜어내고, 꼭 필요한 두 성분만 남겼습니다. PDRN 1,200ppm으로 손상된 장벽을 잠그고, EGF 2ppm으로 회복의 신호를 채워 넣습니다. 약국에서 검증된 저자극 포뮬러로 매일의 회복 루틴을 완성하세요.
@@ -132,7 +132,7 @@
 
 <!-- ===== New Items ===== -->
 <section class="newitems">
-  <div class="newitems__head">
+  <div class="newitems__head" data-reveal data-stagger>
     <h2 class="sec-title">New Items</h2>
     <p class="sec-sub">REVION의 신제품 &amp; 인기 제품을 소개합니다</p>
     <div class="tabs" role="tablist">
@@ -144,7 +144,7 @@
     </div>
   </div>
 
-  <div class="pgrid">
+  <div class="pgrid" data-reveal data-stagger>
     <article class="pcard">
       <a href="#" class="pcard__media">
         <img src="images/figma-pcard1.webp" alt="" />
@@ -261,12 +261,12 @@
 
 <!-- ===== Instagram ===== -->
 <section class="ig-sec">
-  <div class="ig-sec__head">
+  <div class="ig-sec__head" data-reveal data-stagger>
     <h2 class="sec-title">@revion_rx</h2>
     <p class="sec-sub">매일의 회복 루틴, 약사가 직접 전해드리는 더마 노트</p>
     <a href="#" class="btn-pill">인스타그램 팔로우하기 →</a>
   </div>
-  <div class="ig-grid">
+  <div class="ig-grid" data-reveal data-stagger>
     <a href="#"><img src="images/figma-ig1.webp" alt="" /></a>
     <a href="#"><img src="images/figma-ig2.webp" alt="" /></a>
     <a href="#"><img src="images/figma-ig3.webp" alt="" /></a>
@@ -332,6 +332,73 @@
       i = (i + 1) % dots.length;
       dots.forEach((d, idx) => d.classList.toggle('is-on', idx === i));
     }, 4500);
+  })();
+
+  // Respect reduced motion
+  const PRM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Reveal on scroll (with optional stagger)
+  (function(){
+    const targets = document.querySelectorAll('[data-reveal]');
+    if (!('IntersectionObserver' in window) || PRM) {
+      targets.forEach(el => el.classList.add('is-in'));
+      return;
+    }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('is-in');
+          io.unobserve(e.target);
+        }
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+    targets.forEach(el => io.observe(el));
+  })();
+
+  // Header state on scroll
+  (function(){
+    const hdr = document.querySelector('.hdr');
+    if (!hdr) return;
+    const onScroll = () => hdr.classList.toggle('is-scrolled', window.scrollY > 24);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+  })();
+
+  // Parallax (hero bg + category tiles)
+  (function(){
+    if (PRM) return;
+    const heroImg = document.querySelector('[data-parallax]');
+    const heroAmt = heroImg ? parseFloat(heroImg.dataset.parallax) || 0.18 : 0.18;
+    const tiles = document.querySelectorAll('[data-parallax-tile]');
+    let ticking = false;
+
+    function update() {
+      const y = window.scrollY;
+      const vh = window.innerHeight;
+
+      if (heroImg) {
+        heroImg.style.transform = `translate3d(0, ${y * heroAmt}px, 0) scale(1.04)`;
+      }
+      tiles.forEach(t => {
+        const r = t.getBoundingClientRect();
+        if (r.bottom < 0 || r.top > vh) return;
+        const amt = parseFloat(t.dataset.parallaxTile) || 0.08;
+        const center = r.top + r.height / 2 - vh / 2;
+        const offset = -center * amt;
+        t.style.transform = `translate3d(0, ${offset.toFixed(1)}px, 0) scale(1.06)`;
+      });
+      ticking = false;
+    }
+
+    function onScroll() {
+      if (!ticking) {
+        requestAnimationFrame(update);
+        ticking = true;
+      }
+    }
+    update();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
   })();
 </script>
 
