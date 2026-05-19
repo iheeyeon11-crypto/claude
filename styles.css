@@ -127,13 +127,31 @@ img { display: block; max-width: 100%; }
 }
 .hdr__cart:hover { opacity: .92; }
 
-/* ===== Hero ===== */
+/* ===== Hero (carousel) ===== */
 .hero {
   position: relative;
   height: 980px;
   background: linear-gradient(90deg, var(--hero-from) 0%, var(--hero-to) 100%);
   border-radius: 6px;
   overflow: hidden;
+}
+.hero__track {
+  position: absolute; inset: 0;
+  list-style: none; padding: 0; margin: 0;
+}
+.hero__slide {
+  position: absolute; inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 1s cubic-bezier(.4,0,.2,1), visibility 0s linear 1s;
+}
+.hero__slide.is-active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  z-index: 2;
+  transition: opacity 1s cubic-bezier(.4,0,.2,1), visibility 0s linear 0s;
 }
 .hero__bg { position: absolute; inset: 0; }
 .hero__bg img {
@@ -148,6 +166,34 @@ img { display: block; max-width: 100%; }
   max-width: 1013px;
   z-index: 2;
 }
+/* per-slide copy entrance (active slide only) */
+.hero__slide .hero__copy--slide {
+  transform: translateY(16px);
+  opacity: 0;
+  transition: opacity .8s ease .15s, transform .8s cubic-bezier(.2,.6,.2,1) .15s;
+}
+.hero__slide.is-active .hero__copy--slide {
+  opacity: 1;
+  transform: none;
+}
+
+/* Arrows */
+.hero__arrow {
+  position: absolute;
+  top: 50%; transform: translateY(-50%);
+  width: 48px; height: 48px;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: rgba(255,255,255,.78);
+  color: var(--ink);
+  border-radius: 999px;
+  z-index: 6;
+  transition: background .2s ease, transform .2s ease;
+  backdrop-filter: blur(4px);
+}
+.hero__arrow:hover { background: #fff; transform: translateY(-50%) scale(1.06); }
+.hero__arrow svg { width: 22px; height: 22px; }
+.hero__arrow--prev { left: 24px; }
+.hero__arrow--next { right: 24px; }
 .hero__eyebrow {
   color: var(--brand);
   font-size: 24px; font-weight: 600; line-height: 32px;
@@ -175,13 +221,17 @@ img { display: block; max-width: 100%; }
   position: absolute; left: 50%; transform: translateX(-50%);
   bottom: 42px;
   display: flex; gap: 6px;
+  z-index: 6;
 }
-.hero__dots span {
-  display: block; width: 32px; height: 4px; border-radius: 2px;
-  background: rgba(17,17,17,.18);
-  transition: background .3s ease;
+.hero__dots button {
+  display: block; width: 32px; height: 4px; padding: 0;
+  border: none; border-radius: 2px;
+  background: rgba(17,17,17,.22);
+  cursor: pointer;
+  transition: background .3s ease, transform .2s ease;
 }
-.hero__dots span.is-on { background: #111; }
+.hero__dots button:hover { background: rgba(17,17,17,.45); }
+.hero__dots button.is-on { background: #111; }
 
 /* ===== Category tiles ===== */
 .cattile {
