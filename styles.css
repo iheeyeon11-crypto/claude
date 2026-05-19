@@ -246,12 +246,30 @@ img { display: block; max-width: 100%; }
   border-radius: 6px;
   overflow: hidden;
   background: var(--tile-base);
+  cursor: pointer;
+  isolation: isolate;
 }
 .ctile--sun { background: var(--tile-sun); }
 .ctile img {
   position: absolute; inset: 0;
   width: 100%; height: 100%; object-fit: cover;
+  transition: filter .55s cubic-bezier(.2,.6,.2,1);
 }
+/* hover gradient overlay for text contrast */
+.ctile::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 45%, rgba(0,0,0,.22) 100%);
+  opacity: 0;
+  transition: opacity .45s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+.ctile:hover img,
+.ctile:focus-visible img { filter: brightness(.92) saturate(1.05); }
+.ctile:hover::after,
+.ctile:focus-visible::after { opacity: 1; }
+
 .ctile__overlay {
   position: absolute; left: 50%; top: 50%;
   transform: translate(-50%, -50%);
@@ -259,16 +277,49 @@ img { display: block; max-width: 100%; }
   gap: 12px;
   z-index: 2;
   text-align: center;
+  transition: transform .5s cubic-bezier(.2,.6,.2,1);
+}
+.ctile:hover .ctile__overlay,
+.ctile:focus-visible .ctile__overlay {
+  transform: translate(-50%, calc(-50% - 6px));
 }
 .ctile__rt {
   color: var(--ink-2);
   font-size: 28px; font-weight: 700; line-height: 38px;
+  transition: color .35s ease;
 }
+.ctile:hover .ctile__rt,
+.ctile:focus-visible .ctile__rt { color: #000; }
+
 .ctile__cap {
   background: #fff; color: #111;
   padding: 8px 18px;
   border-radius: 2px;
   font-size: 20px; font-weight: 600; line-height: 28px;
+  display: inline-flex; align-items: center;
+  transition: background .35s ease, color .35s ease, padding-right .35s ease;
+}
+.ctile__cap::after {
+  content: "→";
+  font-family: 'Inter', sans-serif;
+  display: inline-block;
+  margin-left: 0;
+  max-width: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: max-width .35s ease, margin-left .35s ease, opacity .35s ease, transform .35s ease;
+}
+.ctile:hover .ctile__cap,
+.ctile:focus-visible .ctile__cap {
+  background: #111; color: #fff;
+}
+.ctile:hover .ctile__cap::after,
+.ctile:focus-visible .ctile__cap::after {
+  max-width: 1.4em;
+  margin-left: 10px;
+  opacity: 1;
+  transform: translateX(0);
 }
 
 /* ===== Best ===== */
