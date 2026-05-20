@@ -185,6 +185,9 @@ img { display: block; max-width: 100%; }
   width: 100%; height: 100%;
   display: block;
   object-fit: cover;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: high-quality;
+  transform: translateZ(0);
 }
 .hero-v2__copy {
   position: absolute;
@@ -207,23 +210,29 @@ img { display: block; max-width: 100%; }
   color: rgba(31, 31, 31, .72);
   letter-spacing: 0.02em;
 }
+/* Design System — Button / Service=Black / Style=Filled / Size=Large / Shape=Full-Rounding */
 .hero-v2__cta {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   margin-top: 24px;
-  padding: 8px 20px;
-  border: 1px solid #1F1F1F;
-  border-radius: 999px;
-  font-family: 'Inter', sans-serif;
-  font-size: 11px; font-weight: 500; line-height: 16px;
-  background: transparent;
-  color: #1F1F1F;
-  letter-spacing: 0.04em;
+  height: 48px;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 100px;
+  background: #141414;
+  color: #FFFFFF;
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0;
   text-transform: lowercase;
-  transition: background 160ms ease, color 160ms ease;
+  transition: background-color 160ms ease;
 }
 .hero-v2__cta:hover {
-  background: #1F1F1F;
-  color: #fff;
+  background: #8D8D8F;
+  color: #FFFFFF;
 }
 
 .hero-v2__indicators {
