@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>REVION ℞ — 약사가 만든 더마 코스메틱</title>
+<meta name="description" content="EGF로 채우고 PDRN으로 잠그는 단 하나의 회복 루틴. 약국에서 검증된 저자극 더마 포뮬러, 레비온." />
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ===== Announce ===== -->
+<div class="announce">
+  전국 1,200여 약국 입점 · 50,000원 이상 무료배송 · 첫 구매 10% 할인
+</div>
+
+<!-- ===== Header ===== -->
+<header class="hdr">
+  <div class="hdr__inner">
+    <nav class="hdr__nav hdr__nav--left">
+      <a href="#">ABOUT</a>
+      <a href="#">SHOP</a>
+      <a href="#">PHARMARCY</a>
+      <a href="#">EVENT</a>
+      <a href="#">COMMUNITY</a>
+    </nav>
+    <a href="#" class="hdr__logo">
+      <img src="images/logo.svg" alt="REVION RX" />
+    </a>
+    <nav class="hdr__nav hdr__nav--right">
+      <a href="#">LOGIN</a>
+      <a href="#">JOIN</a>
+      <a href="#" class="hdr__cart">Cart 2</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== Hero (full-bleed carousel) ===== -->
+<section class="hero-v2" aria-label="REVION 브랜드 히어로" aria-roledescription="carousel">
+  <ul class="hero-v2__track">
+    <li class="hero-v2__slide is-active">
+      <img src="images/hero1.png" alt="REVION rx 히어로 1" class="hero-v2__image" />
+      <div class="hero-v2__copy">
+        <h2 class="hero-v2__title">약사가 직접 처방한 회복 케어<br/>PDRN 1,200ppm + EGF 셀 액티브</h2>
+        <p class="hero-v2__desc">REVION℞ PDRN EGF Origin Rejuvenating Cream</p>
+        <a href="#shop" class="hero-v2__cta">shop now</a>
+      </div>
+    </li>
+    <li class="hero-v2__slide">
+      <img src="images/hero2-1.png" alt="REVION rx 히어로 2" class="hero-v2__image" />
+      <div class="hero-v2__copy">
+        <h2 class="hero-v2__title">크림 · 마스크팩 · 선크림<br/>3종 시그니처 기프트 세트</h2>
+        <p class="hero-v2__desc">REVION℞ Signature Gift Set · 쇼핑백 증정</p>
+        <a href="#shop" class="hero-v2__cta">shop now</a>
+      </div>
+    </li>
+    <li class="hero-v2__slide">
+      <img src="images/hero3.png" alt="REVION rx 히어로 3" class="hero-v2__image" />
+      <div class="hero-v2__copy">
+        <h2 class="hero-v2__title">끈적임 없이 가벼운 데일리 선크림<br/>SPF50+ PA++++ 데일리 보호 시스템</h2>
+        <p class="hero-v2__desc">REVION℞ PDRN EGF Origin Rejuvenating Sun Cream</p>
+        <a href="#shop" class="hero-v2__cta">shop now</a>
+      </div>
+    </li>
+  </ul>
+
+  <div class="hero-v2__indicators" aria-hidden="true">
+    <button class="hero-v2__dot is-active" type="button" data-slide="0" aria-label="히어로 1"></button>
+    <button class="hero-v2__dot" type="button" data-slide="1" aria-label="히어로 2"></button>
+    <button class="hero-v2__dot" type="button" data-slide="2" aria-label="히어로 3"></button>
+  </div>
+</section>
+
+<!-- ===== Hero Cards (3-column editorial) ===== -->
+<section class="hero-cards" aria-label="브랜드 카테고리">
+  <a class="hero-card" href="#about">
+    <div class="hero-card__media">
+      <img src="images/ref-middle-1.png" alt="" class="hero-card__image" />
+    </div>
+    <div class="hero-card__copy">
+      <h2 class="hero-card__title">Origin</h2>
+      <p class="hero-card__desc">PDRN × EGF, 약사 처방으로 만든 회복 케어 시그니처</p>
+    </div>
+  </a>
+
+  <a class="hero-card" href="#daily-care">
+    <div class="hero-card__media">
+      <img src="images/ref-middle-2.png" alt="" class="hero-card__image" />
+    </div>
+    <div class="hero-card__copy">
+      <h2 class="hero-card__title">Daily Care</h2>
+      <p class="hero-card__desc">매일의 컨디션을 가장 정직하게 되돌리는 습관</p>
+    </div>
+  </a>
+
+  <a class="hero-card" href="#pharmacy">
+    <div class="hero-card__media">
+      <img src="images/ref-middle-3.png" alt="" class="hero-card__image" />
+    </div>
+    <div class="hero-card__copy">
+      <h2 class="hero-card__title">Pharmacy Only</h2>
+      <p class="hero-card__desc">전국 약국 단독, 약사가 직접 추천하는 셀렉션</p>
+    </div>
+  </a>
+</section>
+
+<!-- ===== Best Items ===== -->
+<section class="best" id="shop">
+  <h2 class="sec-title" data-reveal>지금 가장 사랑받는 제품</h2>
+  <div class="best__row">
+    <a href="#" class="best__hero" data-reveal>
+      <img src="images/left.png" alt="REVION Signature" />
+    </a>
+    <div class="best__list" data-reveal data-stagger>
+      <a href="#" class="bitem">
+        <div class="bitem__img"><img src="images/PDRN%20EGF%20Origin%20Rejuvenating%20Cream.png" alt="" /></div>
+        <div class="bitem__info">
+          <p class="bitem__name">PDRN EGF Origin Rejuvenating Cream 50ml</p>
+          <p class="bitem__sub">매일의 회복 루틴을 완성하는 시그니처 크림. EGF로 채우고 PDRN으로 잠그는 듀얼 포뮬러.</p>
+          <div class="bitem__price">
+            <span class="pct">20%</span>
+            <span class="was">₩56,000</span>
+            <span class="now">₩45,000</span>
+          </div>
+        </div>
+      </a>
+      <a href="#" class="bitem">
+        <div class="bitem__img"><img src="images/PDRN%20EGF%20Origin%20Rejuvenating%20Mask.webp" alt="" /></div>
+        <div class="bitem__info">
+          <p class="bitem__name">PDRN EGF Origin Rejuvenating Mask 100ml</p>
+          <p class="bitem__sub">잠든 사이 EGF·PDRN으로 채우고 잠그는 슬리핑 마스크 팩.</p>
+          <div class="bitem__price">
+            <span class="pct">20%</span>
+            <span class="was">₩56,000</span>
+            <span class="now">₩45,000</span>
+          </div>
+        </div>
+      </a>
+      <a href="#" class="bitem bitem--last">
+        <div class="bitem__img"><img src="images/PDRN%20EGF%20Origin%20Rejuvenating%20Moisture%20Sun%20Cream.png" alt="" /></div>
+        <div class="bitem__info">
+          <p class="bitem__name">PDRN EGF Origin Rejuvenating Sun Cream 50ml</p>
+          <p class="bitem__sub">약국에서 검증된 저자극 SPF50+ PA++++ 데일리 선크림.</p>
+          <div class="bitem__price">
+            <span class="pct">20%</span>
+            <span class="was">₩56,000</span>
+            <span class="now">₩45,000</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Brand Story Banner ===== -->
+<a href="#brand-story" class="story-banner" data-reveal>
+  <img src="images/hero-product%201.png" alt="" class="story-banner__bg" />
+  <div class="story-banner__inner">
+    <p class="story-banner__eyebrow">BRAND STORY</p>
+    <h2 class="story-banner__title">약사가 만든,<br/>처방형 더마 코스메틱</h2>
+    <p class="story-banner__sub">매일의 피부에 꼭 필요한 두 성분, PDRN 1,200ppm과 EGF 2ppm. 약국에서 검증된 저자극 포뮬러로 완성한 회복 루틴.</p>
+    <span class="story-banner__cta">브랜드 스토리 보기 →</span>
+  </div>
+</a>
+
+<!-- ===== New Items ===== -->
+<section class="newitems">
+  <div class="newitems__head" data-reveal data-stagger>
+    <h2 class="sec-title">New Items</h2>
+    <p class="sec-sub">REVION의 신제품 &amp; 인기 제품을 소개합니다</p>
+    <div class="tabs" role="tablist">
+      <button class="tab is-on">ALL</button>
+      <button class="tab">CREAM</button>
+      <button class="tab">MASK</button>
+      <button class="tab">SUN</button>
+      <button class="tab">SETS</button>
+    </div>
+  </div>
+
+  <div class="pgrid" data-reveal data-stagger>
+    <article class="pcard">
+      <a href="#" class="pcard__media">
+        <img src="images/REVION%20rx%20Signature%20Gift%20Set.webp" alt="" />
+        <button class="wish" aria-label="찜하기">♡</button>
+      </a>
+      <p class="pcard__name">REVION rx Signature Gift Set</p>
+      <p class="pcard__opt">3종 세트</p>
+      <div class="pcard__price">
+        <span class="pct">20%</span>
+        <span class="was">₩55,000</span>
+        <span class="now">₩44,000</span>
+      </div>
+    </article>
+
+    <article class="pcard">
+      <a href="#" class="pcard__media">
+        <img src="images/PDRN%20EGF%20Origin%20Rejuvenating%20Cream.png" alt="" />
+        <button class="wish" aria-label="찜하기">♡</button>
+      </a>
+      <p class="pcard__name">PDRN EGF Origin Rejuvenating Cream</p>
+      <p class="pcard__opt">50ml</p>
+      <div class="pcard__price">
+        <span class="pct">20%</span>
+        <span class="was">₩56,000</span>
+        <span class="now">₩45,000</span>
+      </div>
+    </article>
+
+    <article class="pcard">
+      <a href="#" class="pcard__media">
+        <img src="images/PDRN%20EGF%20Origin%20Rejuvenating%20Mask.webp" alt="" />
+        <button class="wish" aria-label="찜하기">♡</button>
+      </a>
+      <p class="pcard__name">PDRN EGF Origin Rejuvenating Mask</p>
+      <p class="pcard__opt">100ml / 30매</p>
+      <div class="pcard__price">
+        <span class="pct">20%</span>
+        <span class="was">₩56,000</span>
+        <span class="now">₩45,000</span>
+      </div>
+    </article>
+
+    <article class="pcard">
+      <a href="#" class="pcard__media">
+        <img src="images/PDRN%20EGF%20Origin%20Rejuvenating%20Moisture%20Sun%20Cream.png" alt="" />
+        <button class="wish" aria-label="찜하기">♡</button>
+      </a>
+      <p class="pcard__name">PDRN EGF Origin Rejuvenating Moisture Sun Cream</p>
+      <p class="pcard__opt">50ml</p>
+      <div class="pcard__price">
+        <span class="pct">20%</span>
+        <span class="was">₩42,000</span>
+        <span class="now">₩33,600</span>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ===== Instagram ===== -->
+<section class="ig-sec">
+  <div class="ig-sec__head" data-reveal data-stagger>
+    <h2 class="sec-title">@revion_rx</h2>
+    <p class="sec-sub">매일의 회복 루틴, 약사가 직접 전해드리는 더마 노트</p>
+    <a href="#" class="btn-pill">인스타그램 팔로우하기 →</a>
+  </div>
+  <div class="ig-grid" data-reveal data-stagger>
+    <a href="#"><img src="images/figma-ig1.webp" alt="" /></a>
+    <a href="#"><img src="images/insta2.png" alt="" /></a>
+    <a href="#"><img src="images/insta3.png" alt="" /></a>
+    <a href="#"><img src="images/figma-ig4.webp" alt="" /></a>
+    <a href="#"><img src="images/figma-ig5.webp" alt="" /></a>
+    <a href="#"><img src="images/figma-ig6.webp" alt="" /></a>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer class="footer">
+  <div class="foot-top">
+    <a href="#" class="strong">회사소개</a>
+    <a href="#">이용약관</a>
+    <a href="#" class="strong">개인정보처리방침</a>
+    <a href="#">제휴문의</a>
+    <a href="#">고객센터</a>
+    <a href="#">매장찾기</a>
+  </div>
+  <div class="foot-main">
+    <div class="foot-brand">
+      <p class="fb-mark">REVION ℞</p>
+      <p class="fb-tag">약사가 만든 더마 코스메틱</p>
+      <div class="fb-sns">
+        <a href="#" class="sns">IG</a>
+        <a href="#" class="sns">YT</a>
+        <a href="#" class="sns">KKO</a>
+      </div>
+    </div>
+    <div class="foot-info">
+      <p class="strong">고객센터 1588-0000</p>
+      <p>평일 09:00 ~ 18:00 (점심 12:00 ~ 13:00, 주말·공휴일 휴무)</p>
+      <p>주식회사 바로팜 · 대표 OOO · 사업자등록번호 000-00-00000</p>
+      <p>통신판매업신고 제 2026-서울ㅇㅇ-0000 호</p>
+      <p>주소 서울특별시 ㅇㅇ구 ㅇㅇ로 000, 0층</p>
+      <p>이메일 cs@baropharm.co.kr</p>
+    </div>
+    <div class="foot-pay">
+      <p class="strong">결제수단</p>
+      <div class="pay-icons">
+        <span>VISA</span><span>MASTER</span><span>JCB</span><span>NPAY</span><span>KKO</span><span>PAYCO</span>
+      </div>
+    </div>
+  </div>
+  <div class="foot-copy">© 2026 BAROPHARM CO. ALL RIGHTS RESERVED.</div>
+</footer>
+
+<script>
+  // Respect reduced motion (declared first — used by carousel/reveal/parallax)
+  const PRM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Tabs (visual only)
+  document.querySelectorAll('.tabs .tab').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tabs .tab').forEach(b => b.classList.remove('is-on'));
+      btn.classList.add('is-on');
+    });
+  });
+
+  // Hero v2 — full-bleed fade carousel
+  (function(){
+    const hero   = document.querySelector('.hero-v2');
+    const slides = hero?.querySelectorAll('.hero-v2__slide');
+    const dots   = hero?.querySelectorAll('.hero-v2__dot');
+    if (!hero || !slides || slides.length < 2) return;
+
+    const INTERVAL = 4000;
+    let i = 0, timer;
+
+    const goTo = (n) => {
+      i = (n + slides.length) % slides.length;
+      slides.forEach((s, idx) => s.classList.toggle('is-active', idx === i));
+      dots.forEach((d, idx) => d.classList.toggle('is-active', idx === i));
+    };
+    const advance = (d) => goTo(i + d);
+    const start = () => { stop(); timer = setInterval(() => advance(1), INTERVAL); };
+    const stop  = () => { if (timer) { clearInterval(timer); timer = null; } };
+
+    dots.forEach(d => d.addEventListener('click', () => {
+      goTo(parseInt(d.dataset.slide, 10));
+      start();
+    }));
+
+    hero.addEventListener('mouseenter', stop);
+    hero.addEventListener('mouseleave', start);
+
+    document.addEventListener('keydown', (e) => {
+      const rect = hero.getBoundingClientRect();
+      if (rect.bottom < 0 || rect.top > window.innerHeight) return;
+      if (e.key === 'ArrowLeft')  { advance(-1); start(); }
+      if (e.key === 'ArrowRight') { advance(+1); start(); }
+    });
+
+    document.addEventListener('visibilitychange', () => {
+      document.hidden ? stop() : start();
+    });
+
+    if (!PRM) start();
+  })();
+
+  // Reveal on scroll (with optional stagger)
+  (function(){
+    const targets = document.querySelectorAll('[data-reveal]');
+    if (!('IntersectionObserver' in window) || PRM) {
+      targets.forEach(el => el.classList.add('is-in'));
+      return;
+    }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('is-in');
+          io.unobserve(e.target);
+        }
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+    targets.forEach(el => io.observe(el));
+  })();
+
+  // Header state on scroll
+  (function(){
+    const hdr = document.querySelector('.hdr');
+    if (!hdr) return;
+    const onScroll = () => hdr.classList.toggle('is-scrolled', window.scrollY > 24);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+  })();
+
+  // Parallax (hero bgs + category tiles)
+  (function(){
+    if (PRM) return;
+    const heroImgs = document.querySelectorAll('[data-parallax]');
+    const tiles = document.querySelectorAll('[data-parallax-tile]');
+    let ticking = false;
+
+    function update() {
+      const y = window.scrollY;
+      const vh = window.innerHeight;
+
+      heroImgs.forEach(img => {
+        const amt = parseFloat(img.dataset.parallax) || 0.18;
+        img.style.transform = `translate3d(0, ${(y * amt).toFixed(1)}px, 0) scale(1.04)`;
+      });
+      tiles.forEach(t => {
+        const r = t.getBoundingClientRect();
+        if (r.bottom < 0 || r.top > vh) return;
+        const amt = parseFloat(t.dataset.parallaxTile) || 0.08;
+        const center = r.top + r.height / 2 - vh / 2;
+        const offset = -center * amt;
+        t.style.transform = `translate3d(0, ${offset.toFixed(1)}px, 0) scale(1.06)`;
+      });
+      ticking = false;
+    }
+
+    function onScroll() {
+      if (!ticking) {
+        requestAnimationFrame(update);
+        ticking = true;
+      }
+    }
+    update();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+  })();
+</script>
+
+</body>
+</html>
