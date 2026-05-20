@@ -238,6 +238,7 @@ img { display: block; max-width: 100%; }
 /* ===== Hero Cards ===== */
 .hero-cards {
   width: 100vw;
+  margin-top: 4px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 4px;
